@@ -1,10 +1,10 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import { Inter } from '@next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
-
-export default function Home() {
+import Image from "next/image";
+import pp from "../asset/PP.png";
+import ccl from "../asset/CCL.png";
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid'; export default function Home() {
   return (
     <div>
       <Head>
@@ -13,7 +13,48 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      Homepage
+
+      <Box sx={{ flexGrow: 1 }}>
+        <Grid container spacing={2} >
+
+          <Grid item xs={12} className="text-center" md={4}>
+            <h1>placeholder props used to show image loading indicator in nextjs. placeholder is two-value is blur or empty . by default, the value is empty
+
+              blur value shows blur image effect in browser. That means your image is loading.
+
+            </h1>
+          </Grid>
+          <Grid item xs={12} md={8}>
+            <Image
+              src={ccl}
+              alt="Picture of the author"
+              width={1600}
+              height={1200}
+            />
+          </Grid>
+        </Grid>
+      </Box>
+      <Box sx={{ flexGrow: 1 }}>
+        <Grid container spacing={2} >
+
+          
+          <Grid item xs={12} md={8}>
+            <Image
+              src={pp}
+              alt="Picture of the author"
+              width={1600}
+              height={1200}
+            />
+          </Grid>
+          <Grid item xs={12} className="text-center" md={4}>
+            <h1>placeholder props used to show image loading indicator in nextjs. placeholder is two-value is blur or empty . by default, the value is empty
+
+              blur value shows blur image effect in browser. That means your image is loading.
+
+            </h1>
+          </Grid>
+        </Grid>
+      </Box>
 
     </div>
   )

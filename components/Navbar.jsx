@@ -7,23 +7,13 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
-import Divider from "@mui/material/Divider";
-import Paper from "@mui/material/Paper";
-import MenuList from "@mui/material/MenuList";
-import ListItemText from "@mui/material/ListItemText";
 import ListItemIcon from "@mui/material/ListItemIcon";
-import ContentCut from "@mui/icons-material/ContentCut";
-import ContentCopy from "@mui/icons-material/ContentCopy";
-import ContentPaste from "@mui/icons-material/ContentPaste";
 import Cloud from "@mui/icons-material/Cloud";
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import Badge from '@mui/material/Badge';
-
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import Image from "next/image";
+import mypic from "../asset/mgc.png";
 
 const pages = ["Products", "Pricing", "about"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -47,8 +37,8 @@ const Navbar = () => {
     setAnchorElUser(null);
   };
   return (
-    <AppBar position="static" elevation={0} >
-      <Container maxWidth="xl" >
+    <AppBar position="static" elevation={0} color="transparent">
+      <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
           <Typography
@@ -66,10 +56,21 @@ const Navbar = () => {
               textDecoration: "none",
             }}
           >
-            LOGO
+            <Image
+              src={mypic}
+              alt="Picture of the author"
+              width={90}
+              height={90}
+            />
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "flex", md: "none" },
+           
+            }}
+          >
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -99,7 +100,11 @@ const Navbar = () => {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseUserMenu} href={"/"+ page}>
+                <MenuItem
+                  key={page}
+                  onClick={handleCloseUserMenu}
+                  href={"/" + page}
+                >
                   <ListItemIcon>
                     <Cloud fontSize="small" />
                   </ListItemIcon>
@@ -108,8 +113,7 @@ const Navbar = () => {
               ))}
             </Menu>
           </Box>
-        
-          {/* <AdbIcon sx={{ display: { xs: "flex", md: "right" }, mr: 1 }} /> */}
+
           <Typography
             variant="h5"
             noWrap
@@ -126,24 +130,28 @@ const Navbar = () => {
               textDecoration: "none",
             }}
           >
-            LOGO
+            <Image
+              src={mypic}
+              alt="Picture of the author"
+              width={90}
+              height={90}
+            />
           </Typography>
-          
+
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
-                href={"/"+ page}
+                sx={{ my: 2, color: "Black", display: "block" }}
+                href={"/" + page}
               >
                 {page}
               </Button>
             ))}
           </Box>
-          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            
-          <IconButton
+          {/* <Box sx={{ display: { xs: "none", md: "flex" } }}>
+            <IconButton
               size="large"
               aria-label="show 17 new notifications"
               color="inherit"
@@ -152,10 +160,9 @@ const Navbar = () => {
                 <ShoppingCartIcon />
               </Badge>
             </IconButton>
-           
           </Box>
           <Box sx={{ display: { xs: "flex", md: "none" } }}>
-          <IconButton
+            <IconButton
               size="large"
               aria-label="show 17 new notifications"
               color="inherit"
@@ -164,9 +171,7 @@ const Navbar = () => {
                 <ShoppingCartIcon />
               </Badge>
             </IconButton>
-           
-
-          </Box>
+          </Box> */}
           {/* <Box sx={{ flexGrow: 0 }}>
             <Menu
               sx={{ mt: "45px" }}
