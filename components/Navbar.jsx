@@ -145,6 +145,7 @@ const Navbar = () => {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "Black", display: "block" }}
                 href={"/" + page}
+                size="large"
               >
                 {page}
               </Button>

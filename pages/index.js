@@ -18,11 +18,13 @@ import Grid from '@mui/material/Grid'; export default function Home() {
         <Grid container spacing={2} >
 
           <Grid item xs={12} className="text-center" md={4}>
-            <h1>placeholder props used to show image loading indicator in nextjs. placeholder is two-value is blur or empty . by default, the value is empty
+          <div style={{padding:25}}>
+              <h1>placeholder props used to show image loading indicator in nextjs. placeholder is two-value is blur or empty . by default, the value is empty
 
-              blur value shows blur image effect in browser. That means your image is loading.
+                blur value shows blur image effect in browser. That means your image is loading.
 
-            </h1>
+              </h1>
+            </div>
           </Grid>
           <Grid item xs={12} md={8}>
             <Image
@@ -37,7 +39,7 @@ import Grid from '@mui/material/Grid'; export default function Home() {
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={2} >
 
-          
+
           <Grid item xs={12} md={8}>
             <Image
               src={pp}
@@ -47,11 +49,14 @@ import Grid from '@mui/material/Grid'; export default function Home() {
             />
           </Grid>
           <Grid item xs={12} className="text-center" md={4}>
-            <h1>placeholder props used to show image loading indicator in nextjs. placeholder is two-value is blur or empty . by default, the value is empty
+            <div style={{padding:25}}>
+              <h1>placeholder props used to show image loading indicator in nextjs. placeholder is two-value is blur or empty . by default, the value is empty
 
-              blur value shows blur image effect in browser. That means your image is loading.
+                blur value shows blur image effect in browser. That means your image is loading.
 
-            </h1>
+              </h1>
+            </div>
+
           </Grid>
         </Grid>
       </Box>
